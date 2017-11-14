@@ -1,0 +1,32 @@
+Everything in this file is all you would need in order to boot up the terminal
+and start listening to the port
+
+Our server is live, but it doesn't really do anything with everything that is listed below
+
+so what is it that we need in order to have a fully functional server?
+
+we set express to a variable, we set mongoclient to variable in order to interact with the database,
+and we call body parser to a variable.
+
+we are also calling an express function to a variable, and also setting the port and set it up to listen
+
+=====================================================================
+// server.js
+
+//we are initializing our app as an instance of express, the framework
+const express = require('express');
+
+//we are using mongoclient in order to interact with the database
+const MongoClient = require('mongodb').MongoClient;
+
+const bodyParser = require('body-parser');
+
+
+const app = express();
+
+//this is setting our port
+const port = 2200;
+//this makes it so the app is listening to the port
+app.listen(port, () => {
+    console.log('we are live on port: ' + port);
+});
